@@ -9,11 +9,6 @@ The output should be:
 #include <iostream>
 using namespace std;
 
-
-
-
-
-
 int dec_to_bi(int decimal){
     int  binary = 0, pow = 1, rem;
     while (decimal > 0){
@@ -24,11 +19,6 @@ int dec_to_bi(int decimal){
     }
     return binary;
 }
-
-
-
-
-
 
 int main () {
     int decimal;

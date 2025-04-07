@@ -1,5 +1,4 @@
 // Leet code [88. Merge Sorted Array] {Easy}
-
 /*
 Write a C++ program to merge two sorted arrays.
 
@@ -44,6 +43,7 @@ void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         nums1[idx--] = nums2[j--];
     }
 }
+
 int main () {
     vector<int> nums1 = {1,2,3,0,0,0}, nums2 = {2,5,6};
     int m = 3, n = 3;

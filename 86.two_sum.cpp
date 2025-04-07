@@ -34,40 +34,46 @@ Note:
 - You must return the solution in O(n) time complexity using a hashmap for optimized lookup.
 */
 
-// #include <iostream>
-// using namespace std;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// vector<int> twoSum(vector<int>& nums, int target) {
+// Brute Force Approach [O(n^2)]
+#include <iostream>
+using namespace std;
 
-//     vector<int> ans;
-//     int n = nums.size();
-//     for(int i = 0; i < n; i++){
-//         for(int j = i+1; j < n; j++){
-//             if(nums[i] + nums[j] == target){
-//                 ans.push_back(i);
-//                 ans.push_back(j);
-//                 return ans;
-//             }
-//         }
-//     }
-//     return ans;
-// }
+vector<int> twoSum(vector<int>& nums, int target) {
 
-// int main() {
-//     vector<int> nums = {2, 0, 2, 1, 1, 0};
-//     int target = 3;
+    vector<int> ans;
+    int n = nums.size();
+    for(int i = 0; i < n; i++){
+        for(int j = i+1; j < n; j++){
+            if(nums[i] + nums[j] == target){
+                ans.push_back(i);
+                ans.push_back(j);
+                return ans;
+            }
+        }
+    }
+    return ans;
+}
 
-//     vector<int> result = twoSum(nums, target);
+int main() {
+    vector<int> nums = {2, 0, 2, 1, 1, 0};
+    int target = 3;
+
+    vector<int> result = twoSum(nums, target);
     
-//     if (!result.empty()) {
-//         cout << "[" << result[0] << ", " << result[1] << "]" << endl;
-//     } else {
-//         cout << "No valid pair found!" << endl;
-//     }
+    if (!result.empty()) {
+        cout << "[" << result[0] << ", " << result[1] << "]" << endl;
+    } else {
+        cout << "No valid pair found!" << endl;
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Optimized HashMap Approach [O(n)]
 #include <iostream>
 using namespace std;
 
@@ -101,3 +107,5 @@ int main() {
 
     return 0;
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

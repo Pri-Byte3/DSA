@@ -18,7 +18,6 @@ int fibbo(int n){
         a = b;
         b = fib;
     }
-    
     return fib;
 }
 

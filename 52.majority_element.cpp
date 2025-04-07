@@ -14,33 +14,37 @@ The output should be:
 1
 */
 
-// // Brute Force Approch [O(n^2)]
-// #include <iostream>
-// #include <vector>
-// using namespace std;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// vector<int> majority_element(vector<int> nums){
-//     int n = nums.size(), frequency;
-//     for(int val : nums){
-//         frequency = 0;
-//         for(int ele : nums){
-//             if(ele == val){
-//                 frequency++;
-//             }
-//         }
-//         if(frequency > n/2){
-//             return {val};
-//         }
-//     }
-//     return {-1};
-// }
+// Brute Force Approch [O(n^2)]
+#include <iostream>
+#include <vector>
+using namespace std;
 
-// int main () {
-//     vector<int> nums = {1, 2, 2, 1, 1};
-//     vector<int> ans = majority_element(nums);
-//     cout << ans[0]; 
-// return 0;
-// }
+vector<int> majority_element(vector<int> nums){
+    int n = nums.size(), frequency;
+    for(int val : nums){
+        frequency = 0;
+        for(int ele : nums){
+            if(ele == val){
+                frequency++;
+            }
+        }
+        if(frequency > n/2){
+            return {val};
+        }
+    }
+    return {-1};
+}
+
+int main () {
+    vector<int> nums = {1, 2, 2, 1, 1};
+    vector<int> ans = majority_element(nums);
+    cout << ans[0]; 
+return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Optimal [O(nlogn)]
 #include <iostream>
@@ -68,7 +72,6 @@ int majority_element(vector<int>& nums) {
     if (frequency > n / 2) {
         return nums[n - 1];
     }
-
     return -1; // No majority element found
 }
 
@@ -78,6 +81,7 @@ int main() {
     return 0;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Optimal [O(nlogn)]
 #include <iostream>
@@ -96,6 +100,9 @@ int main() {
     cout << majority_element(nums) << endl;
     return 0;
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Moore's Voting Algorithm [O(n)]
 #include <iostream>
 #include <vector>
@@ -123,3 +130,5 @@ int main() {
     cout << majority_element(nums) << endl; 
     return 0;
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

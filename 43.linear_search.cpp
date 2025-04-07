@@ -18,8 +18,6 @@ int linear_search(int arr[], int sz, int target){
     return -1;
 }
 
-
-
 int main () {
     int sz = 7, target = 8;
     int arr[] = {4, 2, 7, 8, 1, 2, 5};

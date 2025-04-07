@@ -41,6 +41,7 @@ int lcm(int a, int b){
     int gcd = gcdRec(a,b);
     return (a*b)/gcd;
 }
+
 int main(){
     int a = 20, b = 28;
     cout << lcm(a,b) << "\n";

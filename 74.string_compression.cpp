@@ -1,5 +1,4 @@
 // Leet code [443. String Compression] {Medium}
-
 /*
 Write a C++ program to perform basic string compression.
 
@@ -59,7 +58,6 @@ int compress(vector<char>& chars) {
     chars.resize(idx);
     return idx;
 }
-
 
 int main () {
     vector<char> chars = {'a','a','b','b','c','c','c'};

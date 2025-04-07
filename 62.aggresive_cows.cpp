@@ -1,5 +1,4 @@
 // Leet code [1552. Magnetic Force Between Two Balls] {Medium}
-
 /*
 Write a C++ program to determine the largest minimum distance between any two balls placed in stalls.
 

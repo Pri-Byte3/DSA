@@ -17,6 +17,7 @@ int sum_of1toN(int n){
     }
     return sum;
 }
+
 int main () {
     cout << "sum = " << sum_of1toN(5) << "\n";
 

@@ -16,7 +16,6 @@ Output:
 #include <iostream>
 using namespace std;
 
-
 void selection_sort(int arr[], int n){
     for(int i = 0; i < n-1; i++){
         int smallest_idx = i;
@@ -34,8 +33,6 @@ void printarr(int arr[], int n){
     }
     cout << "\n";
 }
-
-
 
 int main () {
 int arr[] = {2, 4, 1, 3, 5}; 

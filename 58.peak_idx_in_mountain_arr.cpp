@@ -1,5 +1,4 @@
 // Leet code [852. Peak Index in a Mountain Array] {Medium}
-
 /*
 Write a C++ program to find the peak index in a mountain array.
 

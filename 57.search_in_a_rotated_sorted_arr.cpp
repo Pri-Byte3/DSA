@@ -1,5 +1,4 @@
 // Leet code [33. Search in Rotated Sorted Array] {Medium}
-
 /*
 Write a C++ program to search for a target value in a rotated sorted array.
 
@@ -48,7 +47,6 @@ int search(vector<int>& nums, int target) {
         }
         return -1;
     }
-
 
 int main () {
 vector<int> nums = {4,5,6,7,0,1,2};

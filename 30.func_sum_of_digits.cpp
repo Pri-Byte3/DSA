@@ -22,7 +22,6 @@ int sum_of_digits(int num){
     return digit_sum;
 }
 
-
 int main () {
     int num;
     cout << "Enter the value of n : ";

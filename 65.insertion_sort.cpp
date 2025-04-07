@@ -16,7 +16,6 @@ Output:
 #include <iostream>
 using namespace std;
 
-
 void insertion_sort(int arr[], int n){
     for(int i = 1; i < n; i++){
         int curr = arr[i];
@@ -28,14 +27,13 @@ void insertion_sort(int arr[], int n){
         arr[prev + 1] = curr;
     }
 }
+
 void printarr(int arr[], int n){
     for(int i = 0; i < n; i++){
         cout << arr[i] << "  ";
     }
     cout << "\n";
 }
-
-
 
 int main () {
 int arr[] = {2, 4, 1, 3, 5}; 

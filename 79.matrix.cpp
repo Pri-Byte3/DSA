@@ -21,7 +21,6 @@ Note:
 - If the element is not found, return a message stating "Not Found".
 */
 
-
 #include <iostream>
 using namespace std;
 
@@ -48,7 +47,3 @@ int main () {
 
 return 0;
 }
-
-
-
-

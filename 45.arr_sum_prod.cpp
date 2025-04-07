@@ -9,7 +9,6 @@ The function should iterate through the array to compute the sum and product.
 #include <iostream>
 using namespace std;
 
-
 int sum_of_arr(int arr[], int sz){
     int sum = 0;
     for(int i = 0; i < sz; i++){
@@ -25,8 +24,6 @@ int prod_of_arr(int arr[], int sz){
     }
     return prod;
 }
-
-
 
 int main () {
     int sz = 9;    

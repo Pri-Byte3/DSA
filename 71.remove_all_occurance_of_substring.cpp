@@ -1,5 +1,4 @@
 // Leet code [1910. Remove All Occurrences of a Substring] {Medium}
-
 /*
 Write a C++ program to remove all occurrences of a given substring from a given string.
 

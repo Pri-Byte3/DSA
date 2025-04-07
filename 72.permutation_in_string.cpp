@@ -1,5 +1,4 @@
 // Leet code [567. Permutation in String] {Medium}
-
 /*
 Write a C++ program to check whether one string is a permutation of a substring of another string.
 
@@ -33,7 +32,6 @@ bool issame(int freq1[], int freq2[]){
     return true;
 }
 
-
 bool checkInclusion(string s1, string s2) {
     int freq[26] = {0};
 
@@ -60,4 +58,3 @@ int main () {
 
 return 0;
 }
-

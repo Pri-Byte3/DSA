@@ -1,5 +1,4 @@
 // Leet code [540. Single Element in a Sorted Array] {Medium}
-
 /*
 Write a C++ program to find the single non-duplicate element in a sorted array.
 

@@ -32,27 +32,31 @@ Note:
 - Your program should efficiently handle large numbers.
 */
 
-// // GCD using Iteration
-// #include <iostream>
-// using namespace std;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// int gcd(int a, int b){
-//     while(a > 0 && b > 0){
-//         if(a > b){
-//             a %= b;
-//         }else{
-//             b %= a;
-//         }
-//     }
-//     if(a == 0) return b;
-//     return a;
-// }
-// int main(){
-//     int a = 20, b = 24;
-//     cout << gcd(a,b) << "\n";
-//     return 0;
-// }
+// GCD using Iteration
+#include <iostream>
+using namespace std;
 
+int gcd(int a, int b){
+    while(a > 0 && b > 0){
+        if(a > b){
+            a %= b;
+        }else{
+            b %= a;
+        }
+    }
+    if(a == 0) return b;
+    return a;
+}
+
+int main(){
+    int a = 20, b = 24;
+    cout << gcd(a,b) << "\n";
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // GCD using Recursion [Euclidean Algorithm]
 #include <iostream>
@@ -68,3 +72,5 @@ int main(){
     cout << gcdRec(a,b) << "\n";
     return 0;
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

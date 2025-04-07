@@ -1,5 +1,4 @@
 // Leet code [410. Split Array Largest Sum] {Hard}
-
 /*
 Write a C++ program to solve the "Painter's Partition Problem".
 

@@ -16,6 +16,35 @@ The output should be:
 
 (Explanation: The container formed by heights at index 1 and index 8 has max area 49.)
 */
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Brute Force Approach [O(n^2)]
+#include <iostream>
+#include <vector>
+
+using namespace std;
+    int maxArea(vector<int>& height) {
+        int max_water = 0, n = height.size(), water = 0;
+        int st, end = n-1;
+        for(st = 0; st < n; st++){
+            for(end = st+1; end < n; end++){
+                water = (min(height[st], height[end]) * (end - st));
+                max_water = max(max_water, water);
+            }
+        }
+        return max_water;
+    }
+
+    int main () {
+        vector<int> height = {1,8,6,2,5,4,8,3,7};
+        cout << maxArea(height) << "\n";
+        return 0;
+    }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Optimized Two-Pointer Approach [O(n)]    
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -34,21 +63,15 @@ int maxArea(vector<int>& height) {
         return max_water;
     }
 
-#include <iostream>
-#include <vector>
-using namespace std;
-    int maxArea(vector<int>& height) {
-        int max_water = 0, n = height.size(), water = 0;
-        int st, end = n-1;
-        for(st = 0; st < n; st++){
-            for(end = st+1; end < n; end++){
-                water = (min(height[st], height[end]) * (end - st));
-                max_water = max(max_water, water);
-            }
-        }
-        return max_water;
+    int main () {
+        vector<int> height = {1,8,6,2,5,4,8,3,7};
+        cout << maxArea(height) << "\n";
+        return 0;
     }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
+
+// Optimized Two-Pointer Approach [O(n)]
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -63,8 +86,11 @@ using namespace std;
         }
         return max_water;
     }
+
     int main () {
     vector<int> height = {1,8,6,2,5,4,8,3,7};
     cout << maxArea(height) << "\n";
     return 0;
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

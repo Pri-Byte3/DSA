@@ -1,5 +1,4 @@
 // Leet code [204. Count Primes] {Medium}
-
 /*
 Write a C++ program to count the number of prime numbers less than a given integer `n`.
 

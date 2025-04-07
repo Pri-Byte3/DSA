@@ -39,8 +39,6 @@ int fact_of_n_r(int m){
     return fact;
 }
 
-
-
 int main () {
     int n, r, m;
     

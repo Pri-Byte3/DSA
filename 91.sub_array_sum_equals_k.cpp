@@ -32,30 +32,35 @@ The key idea is to store the frequency of prefix sums seen so far.
 If `prefixSum[j] - k` exists in the map, then a subarray ending at index `j` sums to `k`.
 Time Complexity: O(n), Space Complexity: O(n).
 */
-// #include <iostream>
-// using namespace std;
 
-// int subarraySum(vector<int>& nums, int k) {
-//     int n = nums.size();
-//     int count = 0;
-//     for(int i = 0; i < n; i++){
-//         int sum = 0;
-//         for(int j = i; j < n; j++){
-//             sum += nums[j];
-//             if(sum == k) count++;
-//         }
-//     }
-//     return count;
-// }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// int main(){
-//     vector<int> nums = {1,1,1};
-//     int k = 2;
-//     cout << subarraySum(nums, k) << "\n";
-// }
+// Brute-force Approach Time: O(n^2) | Space: O(1)
+#include <iostream>
+using namespace std;
 
+int subarraySum(vector<int>& nums, int k) {
+    int n = nums.size();
+    int count = 0;
+    for(int i = 0; i < n; i++){
+        int sum = 0;
+        for(int j = i; j < n; j++){
+            sum += nums[j];
+            if(sum == k) count++;
+        }
+    }
+    return count;
+}
 
+int main(){
+    vector<int> nums = {1,1,1};
+    int k = 2;
+    cout << subarraySum(nums, k) << "\n";
+}
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Optimized Approach Using Prefix Sum + Hash Map Time: O(n) | Space: O(n)
 #include <iostream>
 using namespace std;
 
@@ -92,3 +97,5 @@ int main(){
     int k = 33;
     cout << subarraySum(nums, k) << "\n";
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

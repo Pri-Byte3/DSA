@@ -29,7 +29,6 @@ Note:
 - If the given permutation is the largest, return the smallest possible permutation (sorted in ascending order).
 */
 
-
 #include <iostream>
 #include <vector>
 using namespace std;

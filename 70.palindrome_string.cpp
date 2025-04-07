@@ -1,5 +1,4 @@
 // Leet code [125. Valid Palindrome] {Easy}
-
 /*
 Write a C++ program to check if a given string is a valid palindrome, ignoring non-alphanumeric characters and 
 case sensitivity.
@@ -45,8 +44,6 @@ bool isPalindrome(string str) {
         return true;
     }
     
-
-
 int main () {
     string str = "racecar";
     cout << isPalindrome(str) << "\n";

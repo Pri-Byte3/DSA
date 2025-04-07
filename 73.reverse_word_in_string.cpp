@@ -1,5 +1,4 @@
 // Leet code [151. Reverse Words in a String] {Medium}
-
 /*
 Write a C++ program to reverse the order of words in a given string.
 
@@ -43,8 +42,6 @@ string reverseWords(string s) {
     }
     return ans.substr(1);
 }
-
-
 
 int main () {
     string str = "the sky is blue";

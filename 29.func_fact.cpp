@@ -17,6 +17,7 @@ int fact_of_N(int n){
     }
     return fact;
 }
+
 int main () {
     cout << "factorial = " << fact_of_N(5) << "\n";
 

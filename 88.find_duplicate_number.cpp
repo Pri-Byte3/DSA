@@ -32,6 +32,9 @@ This problem can be solved optimally using **Floyd’s Tortoise and Hare (Cycle 
 which is commonly used to detect cycles in a linked list or array traversal.
 */
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Brute-force using a HashSet Time: O(n) | Space: O(n) (extra hash set)
 #include <iostream>
 #include <vector>
 #include <unordered_set>
@@ -56,30 +59,34 @@ int main() {
     return 0;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// #include <iostream>
-// #include <vector>
-// using namespace std;
+// Floyd’s Tortoise and Hare Algorithm (Cycle Detection) Time: O(n) | Space: O(1) — No extra memory!
+#include <iostream>
+#include <vector>
+using namespace std;
 
-// int findDuplicate(vector<int>& nums) {
-//     int slow = nums[0], fast = nums[0];
-//     do{
-//         slow = nums[slow];
-//         fast = nums[nums[fast]];
-//     }while(slow != fast);
+int findDuplicate(vector<int>& nums) {
+    int slow = nums[0], fast = nums[0];
+    do{
+        slow = nums[slow];
+        fast = nums[nums[fast]];
+    }while(slow != fast);
 
-//     slow = nums[0];
+    slow = nums[0];
 
-//     while(slow != fast){
-//         slow = nums[slow];
-//         fast = nums[fast];
-//     }
-//     return slow;
-// }
+    while(slow != fast){
+        slow = nums[slow];
+        fast = nums[fast];
+    }
+    return slow;
+}
 
-// int main() {
-//     vector<int> nums = {3, 1, 3, 4, 2}; 
-//     int result = findDuplicate(nums);  
-//     cout << "Duplicate: " << result << endl;  
-//     return 0;
-// }
+int main() {
+    vector<int> nums = {3, 1, 3, 4, 2}; 
+    int result = findDuplicate(nums);  
+    cout << "Duplicate: " << result << endl;  
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

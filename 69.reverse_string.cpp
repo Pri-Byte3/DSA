@@ -1,5 +1,4 @@
 // Leet code [344. Reverse String] {Easy}
-
 /*
 Write a C++ program to reverse a given vector of characters in-place.
 
@@ -17,7 +16,6 @@ Output:
 #include <iostream>
 #include <vector>
 using namespace std;
-
 
 void reverseString(vector<char>& s) {
     int st = 0, end = s.size() - 1;

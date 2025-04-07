@@ -1,5 +1,4 @@
 // Leet code [410. Split Array Largest Sum] {Hard}
-
 /*
 Write a C++ program to solve the "Split Array Largest Sum" problem. 
 
@@ -59,7 +58,6 @@ int book_allocation(vector<int>& arr, int n, int m) {
     
     return ans;
 }
-
 
 int main () {
 vector<int> arr = {2, 1, 3, 4};

@@ -48,7 +48,7 @@ Approach:
 */
 
 #include <iostream>
-//#include <vector>
+#include <vector>
 #include <unordered_set>
 using namespace std;
 
@@ -58,6 +58,7 @@ vector<int> findMissingAndRepeatedValues(vector<vector<int>>& grid) {
     int n = grid.size();
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
+
             if(s.find(grid[i][j]) != s.end()){
                 int a = grid[i][j];
                 ans.push_back(a);

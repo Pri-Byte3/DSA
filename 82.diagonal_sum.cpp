@@ -20,35 +20,39 @@ Note:
 - Ensure no double-counting of the center element in an odd-sized matrix.
 */
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// #include <iostream> //[O(n * n)]
-// using namespace std;
+// Brute Force Approach [O(n^2)]
+#include <iostream>
+using namespace std;
 
-// int diagonal_sum(int matrix[4][4], int row, int col){
-//     int sum = 0;
-//     for(int i = 0; i < row; i++){
-//         for(int j = 0; j < col; j++){
-//             if(i == j){
-//                 sum += matrix[i][j];
-//             }
-//             else if(j == row-1-i){
-//                 sum += matrix[i][j];
-//             }
-//         }
-//     }
-//     return sum;
-// }
+int diagonal_sum(int matrix[4][4], int row, int col){
+    int sum = 0;
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < col; j++){
+            if(i == j){
+                sum += matrix[i][j];
+            }
+            else if(j == row-1-i){
+                sum += matrix[i][j];
+            }
+        }
+    }
+    return sum;
+}
 
-// int main () {
-//     int matrix[4][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
-//     int row = 4, col = 4; 
-//     cout << diagonal_sum(matrix, row, col) << "\n";
+int main () {
+    int matrix[4][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+    int row = 4, col = 4; 
+    cout << diagonal_sum(matrix, row, col) << "\n";
 
-// return 0;
-// }
+return 0;
+}
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <iostream> //[O(n)]
+// Optimized Approach [O(n)]
+#include <iostream>
 using namespace std;
 
 int diagonal_sum(int matrix[4][4], int n){
@@ -75,3 +79,5 @@ int main () {
 
 return 0;
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

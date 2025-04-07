@@ -1,5 +1,4 @@
 // Leet code [75. Sort Colors] {Medium}
-
 /*
 Write a C++ program to sort an array containing only 0s, 1s, and 2s without using any built-in sorting functions.
 
@@ -17,7 +16,6 @@ Output:
 #include <iostream>
 #include <vector>
 using namespace std;
-
 
     void sortColors(vector<int>& nums) {
         int n = nums.size(), zeros = 0, ones = 0, twos = 0;
@@ -43,6 +41,7 @@ using namespace std;
             nums[idx++] = 2;
         }
     }
+    
 int main () {
 vector<int> nums = {2,0,2,1,1,0};
 sortColors(nums);
